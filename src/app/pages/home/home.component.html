@@ -1,6 +1,6 @@
 <div class="main-wrapper">
   <div class="main-wrapper-content">
-    <main-section title="Videos" [data]="videos$">
+    <main-section title="Videos">
       <section-link>
         <div class="header-link">
           <a routerLinkActive="active" routerLink="/video">Browse all videos</a>
@@ -9,12 +9,40 @@
 
       <main-wrapper>
         <ng-container *ngIf="videos$ | async as videos;">
-          <main-item *ngFor="let video of videos$ | async; let i = index" [ngClass]="i === 0 ? 'primary' : ''">
+          <main-item
+            *ngFor="let video of videos$ | async; let i = index"
+            [ngClass]="i === 0 ? 'primary' : ''"
+            [data]="video"
+          >
           </main-item>
         </ng-container>
 
         <main-section-plus title=" Upload Your Own Video" icon="arrowUp">
         </main-section-plus>
+      </main-wrapper>
+    </main-section>
+
+    <main-section title="People">
+      <section-link>
+        <div class="header-link">
+          <a routerLinkActive="active" routerLink="/people">View All</a>
+        </div>
+      </section-link>
+
+      <main-wrapper>
+        <ng-container *ngIf="peoples$ | async as peoples;">
+          <main-item
+            *ngFor="let people of peoples$ | async; let i = index"
+            [ngClass]="i === 0 ? 'primary' : ''"
+            [data]="people"
+          >
+          </main-item>
+        </ng-container>
+
+        <main-section-plus
+          title="Show Your Work"
+          icon="dotCircle"
+        ></main-section-plus>
       </main-wrapper>
     </main-section>
 
@@ -59,7 +87,9 @@
       </header-link>
 
       <main-wrapper class="scrollable" (scroll)="onScroll($event)">
-        <channel-item *ngFor="let activity of [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14]"></channel-item>
+        <channel-item
+          *ngFor="let activity of [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14]"
+        ></channel-item>
       </main-wrapper>
     </sidebar-section>
   </div>

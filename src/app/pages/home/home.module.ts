@@ -11,7 +11,8 @@ import { SidebarSectionComponent } from '../../components/section-sidebar/sectio
 import { ActivityItemComponent } from '../../components/activity-item/activity-item.component';
 import { ChannelItemComponent } from '../../components/channel-item/channel-item.component';
 import { MainItemComponent } from '../../components/main-item/main-item.component';
-import { VideoService } from '../../app/services/video.service';
+import { VideoService } from '../../services/video.service';
+import { PeopleService } from '../../services/people.service';
 
 @NgModule({
   imports: [
@@ -32,6 +33,6 @@ import { VideoService } from '../../app/services/video.service';
     MainItemComponent
   ],
   schemas: [NO_ERRORS_SCHEMA],
-  providers: [VideoService]
+  providers: [VideoService, PeopleService]
 })
 export class HomePageModule {}

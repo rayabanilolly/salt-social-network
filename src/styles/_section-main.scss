@@ -98,6 +98,10 @@
         min-width: 35px;
         border: solid 3px var(--primary-color);
         border-radius: 50%;
+
+        fa-icon {
+          margin-top: -2px;
+        }
       }
     }
   }

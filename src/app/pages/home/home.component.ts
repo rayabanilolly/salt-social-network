@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { faArrowUp, faComment } from '@fortawesome/free-solid-svg-icons';
 import { Observable } from 'rxjs';
+import { PeopleService } from '../../services/people.service';
 import { VideoService } from '../../services/video.service';
 
 @Component({
@@ -16,12 +17,16 @@ export class HomePageComponent {
   scrolled: Boolean = false;
 
   videos$: Observable<Array<any>>;
+  peoples$: Observable<Array<any>>;
 
-  constructor(private videoService: VideoService) {}
+  constructor(
+    private videoService: VideoService,
+    private peopleService: PeopleService
+  ) {}
 
   ngOnInit() {
     this.videos$ = this.videoService.getVideos();
-    console.log(this.videos$);
+    this.peoples$ = this.peopleService.getPeoples();
   }
 
   onScroll(e) {
