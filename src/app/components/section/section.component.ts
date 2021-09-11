@@ -6,4 +6,5 @@ import { Component, Input } from '@angular/core';
 })
 export class MainSectionComponent {
   @Input() title: String;
+  @Input() data;
 }

@@ -5,7 +5,7 @@
     <ng-content select="section-link"></ng-content>
   </div>
   <div class="content-section-main">
-    <div class="main-item">
+    <div class="main-item" *ngFor="let video of data">
       <div class="main-item-image">
         <img src="lohee" alt="video-thumbnail">
       </div>

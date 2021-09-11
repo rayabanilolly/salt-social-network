@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { faArrowUp, faComment } from '@fortawesome/free-solid-svg-icons';
+import { Observable } from 'rxjs';
+import { VideoService } from '../../services/video.service';
 
 @Component({
   selector: 'home-page',
@@ -11,7 +13,11 @@ export class HomePageComponent {
     comment: faComment
   };
 
-  constructor() {
-    console.log('tes lohee');
+  videos$: Observable<Array<any>>;
+
+  constructor(private videoService: VideoService) {}
+
+  ngOnInit() {
+    this.videos$ = this.videoService.getVideos();
   }
 }

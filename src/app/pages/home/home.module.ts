@@ -6,6 +6,8 @@ import { HomePageRoutingModule } from './home-routing.module';
 import { MainSectionComponent } from '../../components/section/section.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MainSectionPlusComponent } from '../../components/section-plus/section-plus.component';
+import { VideoService } from '../../services/video.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   imports: [
@@ -13,13 +15,15 @@ import { MainSectionPlusComponent } from '../../components/section-plus/section-
     ReactiveFormsModule,
     FormsModule,
     HomePageRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    HttpClientModule
   ],
   declarations: [
     HomePageComponent,
     MainSectionComponent,
     MainSectionPlusComponent
   ],
-  schemas: [NO_ERRORS_SCHEMA]
+  schemas: [NO_ERRORS_SCHEMA],
+  providers: [VideoService]
 })
 export class HomePageModule {}
