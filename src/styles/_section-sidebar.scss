@@ -1,0 +1,41 @@
+.sidebar-section {
+  &-header {
+    display: flex;
+    align-items: flex-end;
+    color: var(--primary-color);
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: solid 2px var(--primary-color);
+
+    .header {
+      &-title {
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+      }
+
+      &-link {
+        font-size: 0.85rem;
+      }
+    }
+  }
+
+  &-main {
+    .activity-item {
+      display: flex;
+      gap: 10px;
+      box-sizing: border-box;
+      height: 100px;
+
+      &-image {
+        width: 150px;
+        height: 100%;
+        background-color: var(--primary-color);
+      }
+
+      &-content {
+        width: calc(100% - 150px);
+      }
+    }
+  }
+}

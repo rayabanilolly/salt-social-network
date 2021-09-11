@@ -1,0 +1,100 @@
+header {
+  display: flex;
+  margin: 2em 0;
+  height: 50px;
+
+  .header {
+    &-left {
+      width: 250px;
+      display: flex;
+      align-items: center;
+
+      &-logo {
+        font-size: 1.75rem;
+        color: var(--primary-color);
+      }
+    }
+
+    &-right {
+      width: calc(100% - 250px);
+      display: flex;
+      gap: 20px;
+
+      &-form {
+        width: calc(100% - 275px);
+
+        .input-wrapper {
+          height: 100%;
+          background-color: var(--primary-color);
+          display: flex;
+          align-items: center;
+          padding: 0 10px;
+
+          input {
+            background: none;
+            border: none;
+            padding: 1em 10px 1em 0;
+            width: 100%;
+
+            &:focus {
+              outline: none;
+            }
+          }
+        }
+      }
+
+      &-upload {
+        width: 100px;
+
+        button {
+          width: 100%;
+          background-color: var(--primary-color);
+          border: none;
+          height: 100%;
+          color: var(--bg-color);
+          font-weight: 600;
+        }
+      }
+
+      &-user {
+        display: flex;
+        width: 175px;
+        gap: 10px;
+        color: var(--primary-color);
+
+        .user {
+          &-icon,
+          &-content {
+            height: 100%;
+          }
+
+          &-icon {
+            background: var(--primary-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
+
+            .ng-fa-icon {
+              margin-top: -2.5px;
+            }
+          }
+
+          &-content {
+            font-size: 1rem;
+            line-height: 1.25rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            font-weight: bold;
+
+            small {
+              display: block;
+              font-weight: lighter;
+            }
+          }
+        }
+      }
+    }
+  }
+}

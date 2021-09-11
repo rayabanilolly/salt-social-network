@@ -1,0 +1,33 @@
+<header>
+  <div class="header-left">
+    <div class="header-left-logo">
+      <a routerLinkActive="active" routerLink="/home">
+        <strong>Social</strong>Network
+      </a>
+    </div>
+  </div>
+  <div class="header-right">
+    <div class="header-right-form">
+      <div class="input-wrapper">
+        <input type="text" placeholder="Find...">
+        <fa-icon [icon]="icons.search" [classes]="['icon-red']"></fa-icon>
+      </div>
+    </div>
+    <div class="header-right-upload">
+      <button class="btn-primary">
+      <fa-icon [icon]="icons.arrowUp"></fa-icon>
+      Upload
+    </button>
+    </div>
+    <div class="header-right-user">
+      <div class="user-icon">
+        <fa-icon [icon]="icons.user" [classes]="['icon-red icon-small']"></fa-icon>
+      </div>
+      <div class="user-content">
+        <div class="user-content-main">
+          Waseem <small>Arshad</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,65 @@
+<div class="main-wrapper">
+  <div class="main-wrapper-content">
+    <main-section title="Videos">
+      <section-link>
+        <div class="header-link">
+          <a routerLinkActive="active" routerLink="/video">Browse all videos</a>
+        </div>
+      </section-link>
+      <section-plus>
+        <main-section-plus title="Upload Your Own Video" icon="arrowUp"></main-section-plus>
+      </section-plus>
+    </main-section>
+
+    <main-section title="People">
+      <section-link>
+        <div class="header-link">
+          <a routerLinkActive="active" routerLink="/people">View all</a>
+        </div>
+      </section-link>
+      <section-plus>
+        <main-section-plus title="Show Your Work" icon="dotCircle"></main-section-plus>
+      </section-plus>
+    </main-section>
+
+    <main-section title="Document">
+      <section-link>
+        <div class="header-link">
+          <a routerLinkActive="active" routerLink="/document">Browse all documents</a>
+        </div>
+      </section-link>
+
+      <section-plus>
+        <main-section-plus title="Share Your Document" icon="plus"></main-section-plus>
+      </section-plus>
+    </main-section>
+  </div>
+
+  <div class="main-wrapper-sidebar">
+    <section class="sidebar-section">
+      <div class="sidebar-section-header">
+        <div class="header-title">Activity</div>
+        <div class="header-link">View timeline / Filter Activities</div>
+      </div>
+
+      <div class="sidebar-section-main">
+        <div class="activity-item">
+          <div class="activity-item-image"></div>
+          <div class="activity-item-content">
+            <div class="content-name">
+              John Stainlor
+              <div class="action">commented</div>
+            </div>
+            <div class="content-main">
+              Well, I am liking it how it captures the audio
+            </div>
+            <div class="content-footer">
+              <fa-icon [icon]="icons.comment"></fa-icon>
+              <div class="timestamp">2 seconds ago</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
