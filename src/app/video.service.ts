@@ -6,6 +6,6 @@ export class VideoService {
   constructor(private http: HttpClient) {}
 
   getVideos() {
-    return this.http.get('/json/videos.json');
+    return this.http.get('/assets/videos.json');
   }
 }

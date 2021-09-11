@@ -6,12 +6,19 @@
           <a routerLinkActive="active" routerLink="/video">Browse all videos</a>
         </div>
       </section-link>
-      <section-plus>
-        <main-section-plus title="Upload Your Own Video" icon="arrowUp"></main-section-plus>
-      </section-plus>
+
+      <main-wrapper>
+        <ng-container *ngIf="videos$ | async as videos;">
+          <main-item *ngFor="let video of videos$ | async; let i = index" [ngClass]="i === 0 ? 'primary' : ''">
+          </main-item>
+        </ng-container>
+
+        <main-section-plus title=" Upload Your Own Video" icon="arrowUp">
+        </main-section-plus>
+      </main-wrapper>
     </main-section>
 
-    <main-section title="People">
+    <!-- <main-section title="People">
       <section-link>
         <div class="header-link">
           <a routerLinkActive="active" routerLink="/people">View all</a>
@@ -32,7 +39,7 @@
       <section-plus>
         <main-section-plus title="Share Your Document" icon="plus"></main-section-plus>
       </section-plus>
-    </main-section>
+    </main-section> -->
   </div>
 
   <div class="main-wrapper-sidebar">

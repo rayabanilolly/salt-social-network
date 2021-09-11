@@ -6,11 +6,12 @@ import { HomePageRoutingModule } from './home-routing.module';
 import { MainSectionComponent } from '../../components/section-main/section-main.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MainSectionPlusComponent } from '../../components/section-plus/section-plus.component';
-import { VideoService } from '../../services/video.service';
+import { VideoService } from '../../../services/video.service';
 import { HttpClientModule } from '@angular/common/http';
 import { SidebarSectionComponent } from '../../components/section-sidebar/section-sidebar.component';
 import { ActivityItemComponent } from '../../components/activity-item/activity-item.component';
 import { ChannelItemComponent } from '../../components/channel-item/channel-item.component';
+import { MainItemComponent } from '../../components/main-item/main-item.component';
 
 @NgModule({
   imports: [
@@ -27,7 +28,8 @@ import { ChannelItemComponent } from '../../components/channel-item/channel-item
     MainSectionPlusComponent,
     SidebarSectionComponent,
     ActivityItemComponent,
-    ChannelItemComponent
+    ChannelItemComponent,
+    MainItemComponent
   ],
   schemas: [NO_ERRORS_SCHEMA],
   providers: [VideoService]

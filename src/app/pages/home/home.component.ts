@@ -21,6 +21,7 @@ export class HomePageComponent {
 
   ngOnInit() {
     this.videos$ = this.videoService.getVideos();
+    console.log(this.videos$);
   }
 
   onScroll(e) {
