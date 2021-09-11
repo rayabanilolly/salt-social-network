@@ -36,30 +36,14 @@
   </div>
 
   <div class="main-wrapper-sidebar">
-    <section class="sidebar-section">
-      <div class="sidebar-section-header">
-        <div class="header-title">Activity</div>
+    <sidebar-section title="Activity">
+      <header-link>
         <div class="header-link">View timeline / Filter Activities</div>
-      </div>
+      </header-link>
 
-      <div class="sidebar-section-main">
-        <div class="activity-item">
-          <div class="activity-item-image"></div>
-          <div class="activity-item-content">
-            <div class="content-name">
-              John Stainlor
-              <div class="action">commented</div>
-            </div>
-            <div class="content-main">
-              Well, I am liking it how it captures the audio
-            </div>
-            <div class="content-footer">
-              <fa-icon [icon]="icons.comment"></fa-icon>
-              <div class="timestamp">2 seconds ago</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+      <main-wrapper>
+        <activity-item *ngFor="let activity of [0,1,2,3,4,5]"></activity-item>
+      </main-wrapper>
+    </sidebar-section>
   </div>
 </div>

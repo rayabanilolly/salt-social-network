@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomePageComponent } from './home.component';
 import { HomePageRoutingModule } from './home-routing.module';
-import { MainSectionComponent } from '../../components/section/section.component';
+import { MainSectionComponent } from '../../components/section-main/section-main.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MainSectionPlusComponent } from '../../components/section-plus/section-plus.component';
 import { VideoService } from '../../services/video.service';
 import { HttpClientModule } from '@angular/common/http';
+import { SidebarSectionComponent } from '../../components/section-sidebar/section-sidebar.component';
+import { ActivityItemComponent } from '../../components/activity-item/activity-item.component';
 
 @NgModule({
   imports: [
@@ -21,7 +23,9 @@ import { HttpClientModule } from '@angular/common/http';
   declarations: [
     HomePageComponent,
     MainSectionComponent,
-    MainSectionPlusComponent
+    MainSectionPlusComponent,
+    SidebarSectionComponent,
+    ActivityItemComponent
   ],
   schemas: [NO_ERRORS_SCHEMA],
   providers: [VideoService]
