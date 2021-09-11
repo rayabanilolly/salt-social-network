@@ -1,0 +1,10 @@
+channel-item {
+  width: calc(50% - 3px);
+  height: 112.5px;
+  background-color: var(--primary-color);
+  display: flex;
+  padding: 0.5rem;
+  font-weight: bold;
+  align-items: flex-end;
+  color: var(--bg-color);
+}

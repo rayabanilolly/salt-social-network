@@ -6,5 +6,8 @@
 
   <div class="sidebar-section-main">
     <ng-content select="main-wrapper"></ng-content>
+    <div class="scroll-state" *ngIf="scrolled">
+      <fa-icon [icon]="icons.plus"></fa-icon>
+    </div>
   </div>
 </section>

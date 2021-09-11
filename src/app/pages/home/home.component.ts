@@ -13,11 +13,20 @@ export class HomePageComponent {
     comment: faComment
   };
 
+  scrolled: Boolean = false;
+
   videos$: Observable<Array<any>>;
 
   constructor(private videoService: VideoService) {}
 
   ngOnInit() {
     this.videos$ = this.videoService.getVideos();
+  }
+
+  onScroll(e) {
+    console.log(e.target.scrollTop);
+    return e.target.scrollTop > 120
+      ? (this.scrolled = true)
+      : (this.scrolled = false);
   }
 }

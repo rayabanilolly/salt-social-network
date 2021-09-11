@@ -10,6 +10,7 @@ import { VideoService } from '../../services/video.service';
 import { HttpClientModule } from '@angular/common/http';
 import { SidebarSectionComponent } from '../../components/section-sidebar/section-sidebar.component';
 import { ActivityItemComponent } from '../../components/activity-item/activity-item.component';
+import { ChannelItemComponent } from '../../components/channel-item/channel-item.component';
 
 @NgModule({
   imports: [
@@ -25,7 +26,8 @@ import { ActivityItemComponent } from '../../components/activity-item/activity-i
     MainSectionComponent,
     MainSectionPlusComponent,
     SidebarSectionComponent,
-    ActivityItemComponent
+    ActivityItemComponent,
+    ChannelItemComponent
   ],
   schemas: [NO_ERRORS_SCHEMA],
   providers: [VideoService]

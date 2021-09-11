@@ -1,4 +1,8 @@
 .sidebar-section {
+  margin-bottom: 3rem;
+  padding-bottom: 1rem;
+  border-bottom: solid 1px var(--primary-color);
+
   &-header {
     display: flex;
     align-items: flex-end;
@@ -20,12 +24,36 @@
     }
   }
 
+  &-main {
+    position: relative;
+
+    .scroll-state {
+      background-color: var(--dark-color);
+      width: 40px;
+      height: 40px;
+      text-align: right;
+      padding-right: 5px;
+      position: absolute;
+      top: 0;
+      right: -1px;
+      color: var(--primary-color)
+      clip-path: polygon(100% 0, 0 0, 100% 100%);
+    }
+  }
+
   main-wrapper {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
     width: 100%;
-    border-bottom: solid 1px var(--primary-color);
-    padding-bottom: 1rem;
+
+    &.scrollable {
+      height: calc((100px * 5) + 5rem);
+      min-height: calc((100px * 5) + 5rem);
+      max-height: calc((100px * 5) + 5rem);
+      overflow-y: scroll;
+      position: relative;
+      gap: 5px;
+    }
   }
 }
