@@ -61,6 +61,7 @@ header {
         width: 175px;
         gap: 10px;
         color: var(--primary-color);
+        position: relative;
 
         .user {
           &-icon,
@@ -93,6 +94,21 @@ header {
               font-weight: lighter;
             }
           }
+        }
+
+        .badge {
+          width: 25px;
+          height: 25px;
+          background-color: var(--primary-color);
+          border-radius: 50%;
+          color: var(--bg-color);
+          font-size: 0.75rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: absolute;
+          top: -15%;
+          right: 0;
         }
       }
     }
