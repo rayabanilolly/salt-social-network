@@ -1,5 +1,7 @@
 <div class="main-wrapper">
+  <!-- Main Content -->
   <div class="main-wrapper-content">
+    <!-- Videos -->
     <main-section title="Videos">
       <section-link>
         <div class="header-link">
@@ -12,7 +14,10 @@
           <main-item
             *ngFor="let video of videos$ | async; let i = index"
             [ngClass]="i === 0 ? 'primary' : ''"
-            [data]="video"
+            [primary]="video.primary"
+            [secondary]="video.secondary"
+            [tertiary]="video.views"
+            type="video"
           >
           </main-item>
         </ng-container>
@@ -22,6 +27,7 @@
       </main-wrapper>
     </main-section>
 
+    <!-- People -->
     <main-section title="People">
       <section-link>
         <div class="header-link">
@@ -34,7 +40,9 @@
           <main-item
             *ngFor="let people of peoples$ | async; let i = index"
             [ngClass]="i === 0 ? 'primary' : ''"
-            [data]="people"
+            [primary]="people.primary"
+            [secondary]="people.secondary"
+            type="people"
           >
           </main-item>
         </ng-container>
@@ -46,31 +54,39 @@
       </main-wrapper>
     </main-section>
 
-    <!-- <main-section title="People">
-      <section-link>
-        <div class="header-link">
-          <a routerLinkActive="active" routerLink="/people">View all</a>
-        </div>
-      </section-link>
-      <section-plus>
-        <main-section-plus title="Show Your Work" icon="dotCircle"></main-section-plus>
-      </section-plus>
-    </main-section>
-
+    <!-- Documents -->
     <main-section title="Document">
       <section-link>
         <div class="header-link">
-          <a routerLinkActive="active" routerLink="/document">Browse all documents</a>
+          <a routerLinkActive="active" routerLink="/document"
+            >Browse all documents</a
+          >
         </div>
       </section-link>
 
-      <section-plus>
-        <main-section-plus title="Share Your Document" icon="plus"></main-section-plus>
-      </section-plus>
-    </main-section> -->
+      <main-wrapper>
+        <ng-container *ngIf="documents$ | async as documents;">
+          <main-item
+            *ngFor="let document of documents$ | async; let i = index"
+            [ngClass]="i === 0 ? 'primary' : ''"
+            [primary]="document.primary"
+            [secondary]="document.primary"
+            type="document"
+          >
+          </main-item>
+        </ng-container>
+
+        <main-section-plus
+          title="Share Your Document"
+          icon="plus"
+        ></main-section-plus>
+      </main-wrapper>
+    </main-section>
   </div>
 
+  <!-- Sidebar Content -->
   <div class="main-wrapper-sidebar">
+    <!-- Activity -->
     <sidebar-section title="Activity">
       <header-link>
         <div class="header-link">View timeline / Filter Activities</div>
@@ -81,6 +97,7 @@
       </main-wrapper>
     </sidebar-section>
 
+    <!-- Channels -->
     <sidebar-section title="Channels" [scrolled]="scrolled">
       <header-link>
         <div class="header-link">Browse all channels</div>

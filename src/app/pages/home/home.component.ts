@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
-import { faArrowUp, faComment } from '@fortawesome/free-solid-svg-icons';
 import { Observable } from 'rxjs';
+
+import { faArrowUp, faComment } from '@fortawesome/free-solid-svg-icons';
+
+import { DocumentService } from '../../services/documents.service';
 import { PeopleService } from '../../services/people.service';
 import { VideoService } from '../../services/video.service';
 
@@ -18,15 +21,18 @@ export class HomePageComponent {
 
   videos$: Observable<Array<any>>;
   peoples$: Observable<Array<any>>;
+  documents$: Observable<Array<any>>;
 
   constructor(
     private videoService: VideoService,
-    private peopleService: PeopleService
+    private peopleService: PeopleService,
+    private documentService: DocumentService
   ) {}
 
   ngOnInit() {
     this.videos$ = this.videoService.getVideos();
     this.peoples$ = this.peopleService.getPeoples();
+    this.documents$ = this.documentService.getDocuments();
   }
 
   onScroll(e) {

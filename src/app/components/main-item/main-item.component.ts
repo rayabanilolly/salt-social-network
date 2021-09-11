@@ -6,5 +6,7 @@ import { Component, Input } from '@angular/core';
 })
 export class MainItemComponent {
   @Input() title: String;
-  @Input() data: Object;
+  @Input() primary: String;
+  @Input() secondary: String;
+  @Input() tertiary: String;
 }

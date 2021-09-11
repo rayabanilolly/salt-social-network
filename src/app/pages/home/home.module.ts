@@ -13,6 +13,7 @@ import { ChannelItemComponent } from '../../components/channel-item/channel-item
 import { MainItemComponent } from '../../components/main-item/main-item.component';
 import { VideoService } from '../../services/video.service';
 import { PeopleService } from '../../services/people.service';
+import { DocumentService } from '../../services/documents.service';
 
 @NgModule({
   imports: [
@@ -33,6 +34,6 @@ import { PeopleService } from '../../services/people.service';
     MainItemComponent
   ],
   schemas: [NO_ERRORS_SCHEMA],
-  providers: [VideoService, PeopleService]
+  providers: [VideoService, PeopleService, DocumentService]
 })
 export class HomePageModule {}
